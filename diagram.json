@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": 43.2, "left": 28.3, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -104.1, "left": -128.9, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -112.8,
+      "left": 69,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "ultrasonic1:GND", "nano:GND.1", "violet", [ "v19.2", "h258", "v153.6", "h-48" ] ],
+    [ "ultrasonic1:VCC", "nano:5V", "limegreen", [ "v182.4", "h211.2" ] ],
+    [ "ultrasonic1:TRIG", "nano:A6", "black", [ "v220.8", "h172.4" ] ],
+    [ "ultrasonic1:ECHO", "nano:A4", "white", [ "v249.6", "h152.8" ] ],
+    [ "bz1:2", "nano:4", "blue", [ "v57.6", "h18.8" ] ],
+    [ "bz1:1", "nano:GND.2", "#8f4814", [ "v9.6", "h57.6" ] ]
+  ],
+  "dependencies": {}
+}
